@@ -35,18 +35,18 @@ function retirar(){
         errorMesage("Porfavor, digite la cantidad que desea retirar","mensajeRetiro");
     }
     else{
-        //mensajeOK("campo no vacio", "mensajeRetiro");
+     
         let esEntero = validarEsEntero(cantidad);
 
         if(esEntero){
-            //mensajeOK("son numeros enteros");
+
             let mayorQueSaldo = evaluarMayorSaldoDisponible(cantidad);
             if(mayorQueSaldo){
                 errorMesage("No tienes suficiente saldo disponible","mensajeRetiro");
                 limpiarInputs("retiro");
             }
             else{
-                //mensajeOK("la cantidad no es mayor que el saldo disponible");
+       
                 let saldoNoMenor = saldoNoMenorDiez(cantidad);
 
                 if(saldoNoMenor){
@@ -54,7 +54,7 @@ function retirar(){
                     limpiarInputs("retiro");
                 }
                 else{
-                    //mensajeOK("una vez retirado el saldo no sera menor de $10.00 pesos");
+        
                     autorizacionRetiro(cantidad);
                 }
             }
@@ -97,7 +97,7 @@ function autorizacionRetiro(cantidad){
 }
 
 
-/*///////////////////////////////SECCIÓN OPERACION DEPOSITO//////////////////////////////////*/
+/*///////////////////////////////SECCIÓN OPERACÓN DEPOSITO//////////////////////////////////*/
 
 //////////////////////////FUNCION PARA REALIZAR DEPOSITOS A CUENTA
 function depositar(){

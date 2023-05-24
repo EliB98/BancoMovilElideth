@@ -1,14 +1,14 @@
 const formatEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
-//variable que almacena el formato de la contraseña
+
 const formatPassword = /^\w+$/;
 
 const formatPassword2 = /[A-Za-z0-9&@_/+%]+/;
 
-let usuario; //variable que almacena el email del usuario
-let pass; //variable que almacena la contraseña
-let camposVacios; //variable que almacena un valor booleano para los inputs
-let existenEspaciosVacios; //variable que almacena un valor booleano si existen espacios en los datos
+let usuario;
+let pass;
+let camposVacios;
+let existenEspaciosVacios; 
 let sinEspacios=false; 
 
 var cuentas = {usuario: "Mali28@yahoo.com", pass:"mIa715g3" , saldo: 5000, nombre: "Meli"}
@@ -24,15 +24,13 @@ function ingresar(){
     }
    
     else{
-        //console.log("ambos campos tienen datos");
-
-        //validamos si existen espacios vacios en los campos ingresados
+    
         existenEspaciosVacios = espaciosVacios(usuario,pass);
         if(existenEspaciosVacios==true){
             mensajeError("Usuario o Contraseña Incorrectos","mensaje");
         }
         else{
-            //console.log("excelente, no existen espacios vacios en los campos ingresados");
+          
             sinEspacios = true;
         }
     }
@@ -61,7 +59,7 @@ function validarCampos(usuario, pass){
     return resultado;
 }
 
-//FUNCION PARA VERIFICAR SI EXISTE ESPACIOS EN BLANCO EN LOS DATOS
+/////////////////////////////////VERIFICACIÓN SI EXISTE ESPACIOS EN BLANCO EN LOS DATOS
 function espaciosVacios(usuario, pass){
     let espaciosUser = false;
     let espaciosPass = false;
@@ -69,7 +67,7 @@ function espaciosVacios(usuario, pass){
 }
 
 
-//FUNCION PARA LOS MENSAJES DE ERROR
+//////////////////////////////////////////////////PARA LOS MENSAJES DE ERROR
 function mensajeError(mensaje,identificador){
     console.log(mensaje);
     document.getElementById(identificador).innerText = mensaje;
