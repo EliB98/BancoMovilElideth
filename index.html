@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/bd3c51d83a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="login">
+        <div class="login-container">
+            <div class="hello"><h1>Hello, Sing in!</h1></div>
+            <div class="login-avatar">
+            <i class="fa-solid fa-circle-user"></i>
+            </div>
+
+            <div class="login-cell">
+                <i class="fa-regular fa-user"></i>
+                <input class="user" type="user" id="user" placeholder="user">
+            </div>
+
+            <div class="login-cell">
+                <i class="fa-solid fa-lock"></i>
+                <input  class="password" type="password" id="password"  placeholder="password">
+            </div>
+            <div class="mensajes">
+                <p class="mensaje" id="mensaje"></p>
+            </div>
+            <div class="boton">
+                <button type="submit" id="ingresar" onclick="ingresar()">Ingresar</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bd3c51d83a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body class="home">
+
+    <nav class="bank-menu">
+
+        <div class="bank-menu-logo">
+             <span><i class="fa-solid fa-building-columns"></i>MobileBank</span>
+          </div>
+
+        <div class="bank-menu-settings">
+            <span><i class="fa-sharp fa-solid fa-gear"></i></span>
+            <span><i class="fa-solid fa-right-from-bracket"></i></span>
+            <span><i class="fa-solid fa-share-from-square"></i></span>
+        </div>
+    </nav>
+
+    <div class="welcome-menu">
+        <span>Lunes 20 Mayo 2023</span>
+        <span>Configuraciones</span>
+        <span>Linea de contacto</span>
+    </div>
+    <section class="contenedorprincipal">
+        <p class="saludo">Hello <span class="nombre-usuario" id="nombre-usuario"></span>, Welcome</p>
+            <div class="account">
+                <span>Monto disponible:</span>
+                <p class="saldo">$ <span class="disponible" id="disponible">0</span>.00 mx</p>
+            </div>
+
+            <div class="option-column">    
+                <button type="submit" id="inicio" onclick="cerrarSesion()">Cerrar sesión</button>  
+            </div>
+    </section>
+
+    <div class="secondContainer">
+        <section class="retiro">
+            <p>Retiro</p>
+            <p>Digite la cantidad a retirar</p>
+            <input type="text" placeholder="$0.00" id="retiro">
+            <p class="mensajeRetiro" id="mensajeRetiro"></p>
+            <button class="btn-retirar" id="retirar" onclick="retirar()">Retirar</button>
+        </section>
+        <section class="deposito">
+            <p>Deposito</p>
+            <p>Digite la cantidad a depositar</p>
+            <input type="text" placeholder="$0.00" id="deposito">
+            <p class="mensajeDeposito" id="mensajeDeposito"></p>
+            <button class="btn-depositar" id="depositar" onclick="depositar()">Depositar</button>
+        </section>   
+    </div>
+
+    <section class="footer" >
+        <div class="inicio">
+            <i class="fa-solid fa-house fa-bounce" style="color: #ef6001;"></i>
+            <p style="color: #ef6001;"><strong>Inicio</strong ></span></p>
+        </div>
+        <div class="circleuser">
+            <i class="fa-solid fa-user"></i>
+            <p class="circle"><strong>Cuentas</strong></span></p>
+        </div>
+        <div class="options">
+            <i class="fa-solid fa-bars"></i>
+            <p><strong>Opciones</strong></span></p>
+        </div>
+    </section>        
+    <script src="home.js"></script>
+</body>
+</html>
